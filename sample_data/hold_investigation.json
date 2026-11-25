@@ -1,0 +1,77 @@
+{
+  "investigation_id": "INV-SAMPLE-01",
+  "suspect": {"stage": "冲压", "material_batch": "MB-BAD"},
+  "work_reports": [
+    {
+      "report_id": "W1",
+      "stage": "冲压",
+      "stage_seq": 1,
+      "inputs": [
+        {"batch": "MB-BAD", "qty": 100}
+      ],
+      "outputs": [
+        {"batch": "S1", "qty": 60},
+        {"batch": "S2", "qty": 40}
+      ]
+    },
+    {
+      "report_id": "W2",
+      "stage": "冲压",
+      "stage_seq": 1,
+      "inputs": [
+        {"batch": "MB-OK", "qty": 100}
+      ],
+      "outputs": [
+        {"batch": "S3", "qty": 100}
+      ]
+    },
+    {
+      "report_id": "W3",
+      "stage": "焊接",
+      "stage_seq": 2,
+      "inputs": [
+        {"batch": "S1", "qty": 60},
+        {"batch": "S3", "qty": 40}
+      ],
+      "outputs": [
+        {"batch": "FG1", "qty": 100}
+      ]
+    },
+    {
+      "report_id": "W4",
+      "stage": "焊接",
+      "stage_seq": 2,
+      "inputs": [
+        {"batch": "S2", "qty": 40}
+      ],
+      "outputs": [
+        {"batch": "FG2", "qty": 40}
+      ]
+    },
+    {
+      "report_id": "W5",
+      "stage": "冲压",
+      "stage_seq": 1,
+      "inputs": [
+        {"batch": "MB-CLEAN", "qty": 80}
+      ],
+      "outputs": [
+        {"batch": "S4", "qty": 80}
+      ]
+    },
+    {
+      "report_id": "W6",
+      "stage": "焊接",
+      "stage_seq": 2,
+      "inputs": [
+        {"batch": "S4", "qty": 80}
+      ],
+      "outputs": [
+        {"batch": "FG3", "qty": 80}
+      ]
+    }
+  ],
+  "handovers": [
+    {"handover_id": "H1", "stage": "冲压", "stage_seq": 1, "from_qty": 280, "to_qty": 280}
+  ]
+}

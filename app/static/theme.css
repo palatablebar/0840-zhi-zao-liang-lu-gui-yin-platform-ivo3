@@ -69,8 +69,8 @@
 .p0840 details summary { cursor:pointer; color:var(--accent); }
 .p0840 details ul { padding-left:1em; }
 .p0840 .verdict { font-size: 11px; font-weight: 700; letter-spacing: .04em; }
-.p0840 .verdict[data-v="PASS"] { color: var(--accent); }
-.p0840 .verdict[data-v="REVIEW"], .p0840 .verdict[data-v="REJECT"] { color: var(--danger); }
+.p0840 .verdict[data-v="PASS"], .p0840 .verdict[data-v="RELEASED"] { color: var(--accent); }
+.p0840 .verdict[data-v="REVIEW"], .p0840 .verdict[data-v="REJECT"], .p0840 .verdict[data-v="HELD"] { color: var(--danger); }
 .p0840 .issues { list-style: none; margin: 0; padding: 0; display: grid; gap: 5px; max-height: 330px; overflow: auto; }
 .p0840 .issues li { display: grid; grid-template-columns: 3.5em 1fr auto; gap: 8px; border-bottom: 1px dashed var(--line); padding: 5px 0; }
 .p0840 .issues li.empty { display:block; }
@@ -102,6 +102,10 @@
 .p0840 .review { display: grid; gap: 8px; }
 .p0840 .review textarea { width: 100%; min-height: 62px; resize: vertical; }
 .p0840 .review-actions { display:flex; align-items:center; flex-wrap:wrap; gap:8px; }
+.p0840 .hold-form { display:flex; flex-wrap:wrap; align-items:flex-end; gap:8px; margin-bottom:8px; }
+.p0840 .hold-form label { display:grid; gap:3px; color:var(--muted); font-size:12px; flex:1 1 130px; }
+.p0840 .hold-form input { width:100%; }
+.p0840 #panel-holds { grid-column: span 2; }
 .p0840 .statusbar {
   display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap;
   padding: 9px calc(var(--pad) * 1.25); border-top: 1px solid var(--line); color: var(--muted); font-size: 12px;

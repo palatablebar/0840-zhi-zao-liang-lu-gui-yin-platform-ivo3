@@ -39,6 +39,20 @@
         </div>
       </div>
     </article>
+    <article class="panel" id="panel-holds">
+      <div class="panel-head"><h2>成品扣货</h2><span class="hint" id="hold-count">--</span></div>
+      <div class="hold-form">
+        <label>可疑工序 <input id="hold-stage" value="冲压"></label>
+        <label>可疑来料批次 <input id="hold-batch" value="MB-BAD"></label>
+        <button id="hold-run" type="button">发起排查</button>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>排查</th><th>成品批次</th><th>工序</th><th class="num">数量</th><th>结论</th><th>原因</th></tr></thead>
+          <tbody id="hold-body"></tbody>
+        </table>
+      </div>
+    </article>
   </section>
 </main>
 {% endblock %}
